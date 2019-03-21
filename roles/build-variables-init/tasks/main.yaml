@@ -9,18 +9,21 @@
   debug:
     var: packaging
 
+- name: Separate the numbering sequences by each pipeline, but leave it alone for legacy pipelines
+  set_fact:
+    version_for_build_numbering: "{{ packaging.version.public   if zuul.pipeline != 'periodic-nightly-test' else   packaging.version.public + '-' + zuul.pipeline }}"
+
 - name: Generate the build number
   build_number:
     zuul_buildset_id: "{{ zuul.buildset }}"
-    version: "{{ packaging.version.public }}"
+    version: "{{ version_for_build_numbering }}"
     build_cache_db_connection_info: "{{ build_cache_db }}"
 
-- name: Print the packaging variables
+- name: Print the generated build number
   debug:
     var: build_number
 
-- name: Save the build tag for subsequent jobs in the pipeline
+- name: Save the generated build number for subsequent jobs in the pipeline
   zuul_return:
     data:
       build_number: "{{ build_number }}"
-
