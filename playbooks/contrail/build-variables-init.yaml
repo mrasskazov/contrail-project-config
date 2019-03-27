@@ -2,6 +2,6 @@
 
 - hosts: localhost
   roles:
-    - contrail-common-libs2
+    - contrail-common-libs
     - build-variables-init
 

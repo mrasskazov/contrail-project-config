@@ -37,40 +37,40 @@ distribution: centos
 #
 image_overrides:
   - image_matcher: ^.*$
-    source_tag: "{{ release }}-0.{{ build_no }}-rhel-queens"
+    source_tag: "rhel-queens-{{ release }}-{{ build_no }}"
     tag_matcher: ^rhel-queens-.*$
     release_tags:
-      - "{{ release }}-0.{{ build_no }}-rhel-queens"
-      - "{{ release }}-latest-rhel-queens"
-      - "{{ release }}-{{ build_no }}-rhel"
-      - "{{ release }}-latest-rhel"
+      - "rhel-queens-{{ release }}-{{ build_no }}"
+      - "rhel-queens-{{ release }}-latest"
+      - "rhel-{{ release }}-{{ build_no }}"
+      - "rhel-{{ release }}-latest"
     distribution: rhel
     registries:
       - ci-repo-public
 
   - image_matcher: developer-sandbox
-    source_tag: "5.1.0-0.{{ build_no }}"
+    source_tag: "master-{{ build_no }}"
     release_tags:
-      - "5.1.0-0.{{ build_no }}"
-      - "5.1.0-latest"
+      - "master-{{ build_no }}"
+      - "master"
       - "latest"
     registries:
       - ci-repo-public
 
   - image_matcher: developer-sandbox
-    source_tag: "{{ release }}-0.{{ build_no }}"
+    source_tag: "{{ release }}-{{ build_no }}"
     release_tags:
-      - "{{ release }}-0.{{ build_no }}"
-      - "{{ release }}-latest"
+      - "{{ release }}-{{ build_no }}"
+      - "{{ release }}"
     registries:
       - ci-repo-public
 
   - image_matcher: "^contrail-go$"
-    source_tag: "{{ release }}-0.{{ build_no }}"
-    tag_matcher: "^5\\.1\\.0-0\\..*$"
+    source_tag: "{{ release }}-{{ build_no }}"
+    tag_matcher: "^master-.*$"
     release_tags:
-      - "5.1.0-0.{{ build_no }}"
-      - "5.1.0-latest"
+      - "master-{{ build_no }}"
+      - "master-latest"
       - "latest"
     registries:
       - ci-repo-public
@@ -86,37 +86,43 @@ image_overrides:
   - image_matcher: "^.*$"
     tag_matcher: "^newton-.*$"
     release_tags:
-      - "{{ release }}-0.{{ build_no }}"
-      - "{{ release }}-latest-newton"
+      - "newton-{{ release }}-{{ build_no }}"
+      - "newton-{{ release }}-latest"
 
   - image_matcher: "^.*$"
     tag_matcher: "^ocata-.*$"
     release_tags:
-      - "{{ release }}-0.{{ build_no }}-ocata"
-      - "{{ release }}-latest-ocata"
+      - "ocata-{{ release }}-{{ build_no }}"
+      - "ocata-{{ release }}-latest"
 
   - image_matcher: "^.*$"
-    tag_matcher: "^5\\.1\\.0-0\\.\\d+-queens$"
+    tag_matcher: "^queens-master-.*$"
     release_tags:
-      - "5.1.0-0.{{ build_no }}-queens"
-      - "5.1.0-0.{{ build_no }}"
-      - "5.1.0-latest-queens"
-      - "5.1.0-latest"
+      - "queens-master-{{ build_no }}"
+      - "queens-master-latest"
+      - "master-{{ build_no }}"
+      - "master-latest"
       - "latest"
 
   - image_matcher: "^.*$"
     tag_matcher: "^queens-.*$"
     release_tags:
-      - "{{ release }}-0.{{ build_no }}-queens"
-      - "{{ release }}-0.{{ build_no }}"
-      - "{{ release }}-latest-queens"
+      - "queens-{{ release }}-{{ build_no }}"
+      - "queens-{{ release }}-latest"
+      - "{{ release }}-{{ build_no }}"
       - "{{ release }}-latest"
+
+  - image_matcher: "^.*$"
+    tag_matcher: "^rocky-master-.*$"
+    release_tags:
+      - "rocky-master-{{ build_no }}"
+      - "rocky-master-latest"
 
   - image_matcher: "^.*$"
     tag_matcher: "^rocky-.*$"
     release_tags:
-      - "{{ release }}-0.{{ build_no }}-rocky"
-      - "{{ release }}-latest-rocky"
+      - "rocky-{{ release }}-{{ build_no }}"
+      - "rocky-{{ release }}-latest"
 
 # rhel_marker and openstack_release have two variants: _lhs and _rhs depending
 # on how they are used:
@@ -126,7 +132,7 @@ image_overrides:
 
 # WARNING: source tags have wrong release - the micro part is missing.
 # ocata-5.0-27 and newton-5.0-27
-source_tag: "{{ release }}-0.{{ build_no }}{{ openstack_release_rhs }}"
+source_tag: "{{ openstack_release_lhs }}{{ release }}-{{ build_no }}"
 
 # The default set of tags to apply to images.
 # XXX(kklimonda): that seems pointless, we override everything.

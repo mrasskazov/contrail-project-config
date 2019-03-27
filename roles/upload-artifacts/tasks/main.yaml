@@ -16,7 +16,7 @@
         build_number: "{{ build_number | default(omit) }}"
     - name: set variables
       set_fact:
-        dest_path: /var/www/html/artifacts/{{ packaging.tag }}/{{ zuul.project.name }}/{{ zuul.job }}
+        dest_path: /var/www/html/artifacts/{{ packaging.repo_name }}/{{ zuul.project.name }}/{{ zuul.job }}
     - name: create target dir
       file:
         state: directory

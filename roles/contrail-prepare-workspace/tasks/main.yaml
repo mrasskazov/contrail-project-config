@@ -7,6 +7,6 @@
 - name: Synchronize sandbox to workspace directory
   synchronize:
     dest: "{{ zuul_workspace_root }}"
-    src: "{{ zuul.executor.work_root }}/contrail-{{ packaging.release }}"
+    src: "{{ zuul.executor.work_root }}/contrail-{{ packaging.version.upstream }}"
   no_log: true
 
