@@ -54,7 +54,7 @@
   environment:
     USER: root
     WORKSPACE: "{{ ansible_env.HOME }}/{{ packaging.target_dir }}"
-    UPSTREAM_VERSION: "{{ packaging.version.upstream }}"
+    UPSTREAM_VERSION: "{{ packaging.release }}"
     ZUUL_CHANGES: "{{ zuul.ref }}"
     ZUUL_PROJECT: "{{ zuul.project.short_name }}"
     PROJECT_NAME: "{{ zuul.project.short_name }}"

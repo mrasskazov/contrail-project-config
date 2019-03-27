@@ -18,5 +18,5 @@
     - name: return repository location back to zuul for children jobs
       zuul_return:
         data:
-          contrail_container_tag: '{{ packaging.docker_version }}'
+          contrail_container_tag: '{{ packaging.tag }}'
       delegate_to: localhost

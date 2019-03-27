@@ -11,7 +11,7 @@
 
 - name: Separate the numbering sequences by each pipeline, but leave it alone for legacy pipelines
   set_fact:
-    version_for_build_numbering: "{{ packaging.version.public   if zuul.pipeline != 'periodic-nightly-test' else   packaging.version.public + '-' + zuul.pipeline }}"
+    version_for_build_numbering: "{{ packaging.release   if zuul.pipeline != 'periodic-nightly-test' else   packaging.release + '-' + zuul.pipeline }}"
 
 - name: Generate the build number
   build_number:
