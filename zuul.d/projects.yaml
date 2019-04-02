@@ -560,6 +560,11 @@
       - noops
 
 - project:
+    name: Juniper/contrail-windows-ci-infra
+    templates:
+      - noops
+
+- project:
     name: tungstenfabric/docs
     templates:
       - noops
