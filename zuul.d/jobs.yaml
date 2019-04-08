@@ -284,7 +284,6 @@
     secrets:
       - site_pulp
       - docker_registry
-      - dockerhub
       - registry_tungsten_ci
 
 # Transition to contrail-base when all jobs are ported
