@@ -391,6 +391,7 @@
       jenkins_job: ci-contrail-windows-nighly-build
     secrets:
       - dockerhub
+
 - job:
     name: generate-build-change-info
     parent: contrail-src-base
@@ -405,4 +406,3 @@
     secrets:
       - name: db_credentials
         secret: zuul_db
-
