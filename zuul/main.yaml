@@ -103,7 +103,6 @@
               exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           - tungstenfabric-infra-preview/ci-utils
           - tungstenfabric-infra-preview/containerregistry
-          - tungstenfabric-preview/atom
           - tungstenfabric-infra-preview/tungsten-zuul-jobs:
               shadow: tungstenfabric-infra-preview/project-config
           - tungstenfabric-preview/analytics
@@ -165,3 +164,7 @@
           - tungstenfabric-preview/vijava
           - tungstenfabric/docs
           - tungstenfabric-preview/test-runner
+          - tungstenfabric-preview/intent-service
+          - tungstenfabric-preview/windows-test
+          - tungstenfabric-preview/windows-ci-infra
+
