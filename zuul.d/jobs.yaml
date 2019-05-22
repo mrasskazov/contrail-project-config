@@ -110,6 +110,7 @@
       - Juniper/contrail-tripleo-puppet
       - Juniper/contrail-vcenter-plugin
       - Juniper/contrail-vcenter-manager
+      - Juniper/contrail-vcenter-fabric-manager
       - Juniper/contrail-vnc
       - Juniper/contrail-vrouter
       - Juniper/contrail-vrouter-java-api
@@ -154,6 +155,7 @@
       - Juniper/contrail-tripleo-puppet
       - Juniper/contrail-vcenter-plugin
       - Juniper/contrail-vcenter-manager
+      - Juniper/contrail-vcenter-fabric-manager
       - Juniper/contrail-vnc
       - Juniper/contrail-vrouter
       - Juniper/contrail-vrouter-java-api
