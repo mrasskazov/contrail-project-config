@@ -168,6 +168,7 @@
           - tungstenfabric-preview/intent-service
           - tungstenfabric-preview/windows-test
           - tungstenfabric-preview/windows-ci-infra
+          - tungstenfabric-preview/vcenter-fabric-manager
       gerrit:
         untrusted-projects:
           - tungstenfabric/contrail-ci-test
