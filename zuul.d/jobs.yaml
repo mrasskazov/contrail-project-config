@@ -385,6 +385,7 @@
 - job:
     name: create-windows-containers
     parent: trigger-win-base
+    branches: ^(master)$
     post-run: playbooks/publish-windows-containers/post.yaml
     required-projects:
       - tungsten-infra/containerregistry
