@@ -14,6 +14,7 @@
             - ^R6.0-WIP$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^contrail/ocata$
             - ^contrail/queens$
             - ^contrail/rocky$
@@ -34,6 +35,7 @@
             - ^R6.0-WIP$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^contrail/ocata$
             - ^contrail/queens$
             - ^contrail/rocky$
@@ -92,6 +94,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
             - ^contrail/ocata$
             - ^contrail/queens$
@@ -113,6 +116,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
             - ^contrail/ocata$
             - ^contrail/queens$
@@ -135,6 +139,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
             - ^contrail/ocata$
             - ^contrail/queens$
@@ -160,6 +165,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
             - ^contrail/ocata$
             - ^contrail/queens$
@@ -277,6 +283,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
             - ^contrail/.*$
             - ^contrail_dpdk_.*$
@@ -308,6 +315,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
             - ^contrail/.*$
             - ^contrail_dpdk_.*$
@@ -334,6 +342,7 @@
             - ^master$
             - ^R5.0$
             - ^R5.1$
+            - ^R1907$
             - ^R6.0-WIP$
     start:
       stats:
