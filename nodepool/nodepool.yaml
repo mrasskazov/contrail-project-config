@@ -171,15 +171,6 @@ providers:
             diskimage: centos-7-4
             console-log: True
             key-name: ci-infra-shared-key
-          - name: rhel-7-builder-xxlarge
-            flavor-name: m1.ci-systest
-            diskimage: rhel-7
-            console-log: True
-          - name: rhel-7-builder
-            flavor-name: m1.16g_80g_8vcpu
-            diskimage: rhel-7
-            console-log: True
-            key-name: ci-infra-shared-key
           - name: rhel-7-sanity
             flavor-name: m1.32g_80g_8vcpu
             diskimage: rhel-7
