@@ -375,7 +375,7 @@
       - Juniper/contrail-windows-docker-driver
       - Juniper/contrail-windows-test
     nodeset: ubuntu-xenial
-    timeout: 10800
+    timeout: 14400
     vars:
       setup_docker_registry: true
       manifest_file: windows.xml
