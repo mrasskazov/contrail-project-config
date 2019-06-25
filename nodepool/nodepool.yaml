@@ -47,8 +47,8 @@ providers:
   - name: juniper-contrail-ci
     region-name: "RegionOne"
     cloud: jnpr-contrail-ci
-    api-timeout: 60
-    boot-timeout: 120
+    api-timeout: 240
+    boot-timeout: 360
     clean-floating-ips: true
     rate: 1.0
     ipv6-preferred: false
@@ -63,7 +63,7 @@ providers:
       - name: ubuntu-xenial
     pools:
       - name: ci-zuulv3
-        max-servers: 30
+        max-servers: 128
         availability-zones:
           - opencontrail-ci-zone
         networks:
@@ -128,8 +128,8 @@ providers:
   - name: juniper-contrail-ci-c
     region-name: "RegionOne"
     cloud: jnpr-contrail-ci-c
-    api-timeout: 60
-    boot-timeout: 120
+    api-timeout: 240
+    boot-timeout: 360
     clean-floating-ips: true
     rate: 1.0
     ipv6-preferred: false
@@ -144,7 +144,7 @@ providers:
       - name: ubuntu-xenial
     pools:
       - name: ci-zuulv3-c
-        max-servers: 50
+        max-servers: 128
         availability-zones:
           - nova
         networks:
@@ -201,11 +201,12 @@ providers:
             diskimage: ubuntu-xenial
             console-log: True
             key-name: ci-infra-shared-key
+
   - name: juniper-cluster-c-isolated
     region-name: "RegionOne"
     cloud: jnpr-cluster-c-isolated
-    api-timeout: 60
-    boot-timeout: 120
+    api-timeout: 240
+    boot-timeout: 360
     clean-floating-ips: true
     rate: 1.0
     ipv6-preferred: false
@@ -218,7 +219,7 @@ providers:
       - name: ubuntu-xenial
     pools:
       - name: ci-zuulv3-c-isolated
-        max-servers: 20
+        max-servers: 128
         availability-zones:
           - nova
         networks:
