@@ -572,6 +572,8 @@
 
 - project:
     name: Juniper/contrail-third-party-packages
+    templates:
+      - noops
     check:
       jobs:
         - build-third-party-rpms-centos7:
