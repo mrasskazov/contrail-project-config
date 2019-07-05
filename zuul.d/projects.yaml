@@ -362,6 +362,12 @@
     name: Juniper/contrail-vcenter-fabric-manager
     templates:
       - build-container
+    check:
+      jobs:
+        - contrail-vcenter-fabric-manager-linters
+    gate:
+      jobs:
+        - contrail-vcenter-fabric-manager-linters
 
 - project:
     name: Juniper/contrail-docker
