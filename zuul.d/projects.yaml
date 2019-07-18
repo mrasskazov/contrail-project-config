@@ -204,9 +204,6 @@
     check:
       jobs:
         - contrail-build-win2016
-    gate:
-      jobs:
-        - contrail-build-win2016
 
 - project-template:
     name: windows-all-tests
