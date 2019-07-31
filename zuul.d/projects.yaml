@@ -230,21 +230,21 @@
     templates:
       - unittests
       - systests
-      - windows-sanity
+      #- windows-sanity
 
 - project:
     name: Juniper/contrail-build
     templates:
       - unittests
       - systests
-      - windows-sanity
+      #- windows-sanity
 
 - project:
     name: Juniper/contrail-controller
     templates:
       - unittests
       - systests
-      - windows-sanity
+      #- windows-sanity
     check:
       jobs:
         - contrail-vnc-unittest-centos7-tntestr:
@@ -287,7 +287,7 @@
     templates:
       - unittests
       - systests
-      - windows-sanity
+      #- windows-sanity
     check:
       jobs:
         - contrail-vrouter-ut-centos7
@@ -297,7 +297,7 @@
     templates:
       - unittests
       - systests
-      - windows-sanity
+      #- windows-sanity
 
 - project:
     name: Juniper/contrail-neutron-plugin
@@ -526,7 +526,7 @@
     templates:
       - unittests
       - systests
-      - windows-sanity
+      #- windows-sanity
 
 - project:
     name: Juniper/contrail-java-api
@@ -599,20 +599,20 @@
     templates:
       - openshift-systests
 
-- project:
-    name: Juniper/contrail-windows-docker-driver
-    templates:
-      - windows-sanity
+#- project:
+#    name: Juniper/contrail-windows-docker-driver
+#    templates:
+#      - windows-sanity
 
 - project:
     name: Juniper/contrail-vcenter-manager
     templates:
       - build-container
 
-- project:
-    name: Juniper/contrail-windows
-    templates:
-      - windows-sanity
+#- project:
+#    name: Juniper/contrail-windows
+#    templates:
+#      - windows-sanity
 
 - project:
     name: Juniper/contrail-windows-test
