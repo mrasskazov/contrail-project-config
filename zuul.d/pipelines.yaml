@@ -231,21 +231,21 @@
     trigger:
       timer:
         - time: "0 0 30 12 *"
-    start:
-      stats:
-      smtp:
-        to: cf-test@juniper.net, ci-admin@opencontrail.org, dl-contrail-sw@juniper.net
-        subject: "[periodic-nightly] Starting jobs - {change.branch}"
-    success:
-      stats:
-      smtp:
-        to: cf-test@juniper.net, ci-admin@opencontrail.org, dl-contrail-sw@juniper.net
-        subject: "[periodic-nightly] SUCCESS - {change.branch}"
-    failure:
-      stats:
-      smtp:
-        to: cf-test@juniper.net, ci-admin@opencontrail.org, dl-contrail-sw@juniper.net
-        subject: "[periodic-nightly] FAILURE - {change.branch}"
+#    start:
+#      stats:
+#      smtp:
+#        to: cf-test@juniper.net, ci-admin@opencontrail.org, dl-contrail-sw@juniper.net
+#        subject: "[periodic-nightly] Starting jobs - {change.branch}"
+#    success:
+#      stats:
+#      smtp:
+#        to: cf-test@juniper.net, ci-admin@opencontrail.org, dl-contrail-sw@juniper.net
+#        subject: "[periodic-nightly] SUCCESS - {change.branch}"
+#    failure:
+#      stats:
+#      smtp:
+#        to: cf-test@juniper.net, ci-admin@opencontrail.org, dl-contrail-sw@juniper.net
+#        subject: "[periodic-nightly] FAILURE - {change.branch}"
     footer-message: |
 
       Dockerhub: https://hub.docker.com/u/opencontrailnightly/
