@@ -18,8 +18,8 @@
         #  - tungsten-ci/contrail-project-config
         untrusted-projects:
           #- Juniper/contrail
-          - tungsten/contrail-zuul-jobs:
-              shadow: mrasskazov/contrail-project-config
+          #- tungsten/contrail-zuul-jobs:
+          #    shadow: mrasskazov/contrail-project-config
           - tungsten/contrail-analytics
           #- tungsten/contrail-ansible
           #- tungsten/contrail-ansible-deployer
