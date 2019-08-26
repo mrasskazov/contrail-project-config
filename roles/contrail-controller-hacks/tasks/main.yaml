@@ -6,14 +6,14 @@
     chdir: "{{ ansible_env.HOME }}/src/{{ item }}"
   failed_when: false
   with_items:
-    - review.opencontrail.org/Juniper/contrail-controller
-    - review.opencontrail.org/Juniper/contrail-build
-    - review.opencontrail.org/Juniper/contrail-vrouter
-    - review.opencontrail.org/Juniper/contrail-sandesh
-    - review.opencontrail.org/Juniper/contrail-generateDS
-    - review.opencontrail.org/Juniper/contrail-common
-    - review.opencontrail.org/Juniper/contrail-analytics
-    - review.opencontrail.org/Juniper/contrail-api-client
+    - gerrit.mcp.mirantis.net/tungsten/contrail-controller
+    - gerrit.mcp.mirantis.net/tungsten/contrail-build
+    - gerrit.mcp.mirantis.net/tungsten/contrail-vrouter
+    - gerrit.mcp.mirantis.net/tungsten/contrail-sandesh
+    - gerrit.mcp.mirantis.net/tungsten/contrail-generateDS
+    - gerrit.mcp.mirantis.net/tungsten/contrail-common
+    - gerrit.mcp.mirantis.net/tungsten/contrail-analytics
+    - gerrit.mcp.mirantis.net/tungsten/contrail-api-client
   tags:
     # Ignore ANSIBLE0006: Can not use git module for adding remotes
     - skip_ansible_lint
@@ -23,14 +23,14 @@
   args:
     chdir: "{{ ansible_env.HOME }}/src/{{ item }}"
   with_items:
-    - review.opencontrail.org/Juniper/contrail-controller
-    - review.opencontrail.org/Juniper/contrail-build
-    - review.opencontrail.org/Juniper/contrail-vrouter
-    - review.opencontrail.org/Juniper/contrail-sandesh
-    - review.opencontrail.org/Juniper/contrail-generateDS
-    - review.opencontrail.org/Juniper/contrail-common
-    - review.opencontrail.org/Juniper/contrail-analytics
-    - review.opencontrail.org/Juniper/contrail-api-client
+    - gerrit.mcp.mirantis.net/tungsten/contrail-controller
+    - gerrit.mcp.mirantis.net/tungsten/contrail-build
+    - gerrit.mcp.mirantis.net/tungsten/contrail-vrouter
+    - gerrit.mcp.mirantis.net/tungsten/contrail-sandesh
+    - gerrit.mcp.mirantis.net/tungsten/contrail-generateDS
+    - gerrit.mcp.mirantis.net/tungsten/contrail-common
+    - gerrit.mcp.mirantis.net/tungsten/contrail-analytics
+    - gerrit.mcp.mirantis.net/tungsten/contrail-api-client
   tags:
     # Ignore ANSIBLE0006: Can not use git module for fetching
     - skip_ansible_lint
