@@ -13,7 +13,7 @@
       - playbooks/base-minimal/post-ssh.yaml
       - playbooks/base-minimal/post-logs.yaml
     roles:
-      - zuul: Juniper/zuul-jobs
+      - zuul: mrasskazov/zuul-jobs
     timeout: 1800
     nodeset:
       nodes:
@@ -37,8 +37,8 @@
       - playbooks/base/post-ssh.yaml
       - playbooks/base/post-logs.yaml
     roles:
-      - zuul: Juniper/zuul-jobs
-      - zuul: Juniper/contrail-zuul-jobs
+      - zuul: mrasskazov/zuul-jobs
+      - zuul: tungsten-ci/contrail-zuul-jobs
     timeout: 28800
     nodeset:
       nodes:
@@ -58,8 +58,8 @@
       - playbooks/base/post-ssh.yaml
       - playbooks/base/post-logs.yaml
     roles:
-      - zuul: Juniper/zuul-jobs
-      - zuul: Juniper/contrail-zuul-jobs
+      - zuul: mrasskazov/zuul-jobs
+      - zuul: tungsten-ci/contrail-zuul-jobs
     timeout: 28800
     secrets:
       - site_logs
@@ -73,8 +73,8 @@
       as opposed to the contrail-vnc-base job that uses Android repo to prepare the source tree.
     pre-run: playbooks/contrail/src-pre.yaml
     roles:
-      - zuul: Juniper/zuul-jobs
-      - zuul: Juniper/contrail-zuul-jobs
+      - zuul: mrasskazov/zuul-jobs
+      - zuul: tungsten-ci/contrail-zuul-jobs
 
 - job:
     name: contrail-vnc-base
@@ -88,39 +88,39 @@
       A base job that prepares Contrail VNC sandbox using Android repo,
       as opposed to the contrail-src-base job that copies the sources directly.
     required-projects:
-      - Juniper/contrail-analytics
-      - Juniper/contrail-api-client
-      - Juniper/contrail-build
-      - Juniper/contrail-common
-      - Juniper/contrail-controller
-      - Juniper/contrail-fabric-utils
-      - name: Juniper/contrail-dpdk
+      - tungsten/contrail-analytics
+      - tungsten/contrail-api-client
+      - tungsten/contrail-build
+      - tungsten/contrail-common
+      - tungsten/contrail-controller
+      - tungsten/contrail-fabric-utils
+      - name: tungsten/contrail-dpdk
         override-checkout: contrail_dpdk_17_11_3
-      - Juniper/contrail-generateDS
-      - Juniper/contrail-heat
-      - Juniper/contrail-java-api
-      - Juniper/contrail-neutron-plugin
-      - Juniper/contrail-nova-vif-driver
-      - Juniper/contrail-packages
-      - Juniper/contrail-provisioning
-      - Juniper/contrail-sandesh
-      - Juniper/contrail-specs
-      - Juniper/contrail-test
-      - Juniper/contrail-third-party
-      - Juniper/contrail-tripleo-puppet
-      - Juniper/contrail-vcenter-plugin
-      - Juniper/contrail-vcenter-manager
-      - Juniper/contrail-vcenter-fabric-manager
-      - Juniper/contrail-vnc
-      - Juniper/contrail-vrouter
-      - Juniper/contrail-vrouter-java-api
-      - Juniper/contrail-vro-plugin
-      - Juniper/contrail-web-controller
-      - Juniper/contrail-web-core
-      - Juniper/contrail-web-server-manager
-      - Juniper/contrail-web-storage
-      - Juniper/contrail-webui-third-party
-      - Juniper/vijava
+      - tungsten/contrail-generateDS
+      - tungsten/contrail-heat
+      - tungsten/contrail-java-api
+      - tungsten/contrail-neutron-plugin
+      - tungsten/contrail-nova-vif-driver
+      - tungsten/contrail-packages
+      - tungsten/contrail-provisioning
+      - tungsten/contrail-sandesh
+      - tungsten/contrail-specs
+      - tungsten/contrail-test
+      - tungsten/contrail-third-party
+      - tungsten/contrail-tripleo-puppet
+      - tungsten/contrail-vcenter-plugin
+      - tungsten/contrail-vcenter-manager
+      - tungsten/contrail-vcenter-fabric-manager
+      - tungsten/contrail-vnc
+      - tungsten/contrail-vrouter
+      - tungsten/contrail-vrouter-java-api
+      - tungsten/contrail-vro-plugin
+      - tungsten/contrail-web-controller
+      - tungsten/contrail-web-core
+      - tungsten/contrail-web-server-manager
+      - tungsten/contrail-web-storage
+      - tungsten/contrail-webui-third-party
+      - tungsten/vijava
     pre-run: playbooks/contrail/vnc-pre.yaml
     vars:
       tpc_branch: 'R5.0'
@@ -133,39 +133,39 @@
       A base job that prepares Contrail VNC sandbox using Android repo,
       as opposed to the contrail-src-base job that copies the sources directly.
     required-projects:
-      - Juniper/contrail-analytics
-      - Juniper/contrail-api-client
-      - Juniper/contrail-build
-      - Juniper/contrail-common
-      - Juniper/contrail-controller
-      - Juniper/contrail-fabric-utils
-      - name: Juniper/contrail-dpdk
+      - tungsten/contrail-analytics
+      - tungsten/contrail-api-client
+      - tungsten/contrail-build
+      - tungsten/contrail-common
+      - tungsten/contrail-controller
+      - tungsten/contrail-fabric-utils
+      - name: tungsten/contrail-dpdk
         override-checkout: contrail_dpdk_18_05_1
-      - Juniper/contrail-generateDS
-      - Juniper/contrail-heat
-      - Juniper/contrail-java-api
-      - Juniper/contrail-neutron-plugin
-      - Juniper/contrail-nova-vif-driver
-      - Juniper/contrail-packages
-      - Juniper/contrail-provisioning
-      - Juniper/contrail-sandesh
-      - Juniper/contrail-specs
-      - Juniper/contrail-test
-      - Juniper/contrail-third-party
-      - Juniper/contrail-tripleo-puppet
-      - Juniper/contrail-vcenter-plugin
-      - Juniper/contrail-vcenter-manager
-      - Juniper/contrail-vcenter-fabric-manager
-      - Juniper/contrail-vnc
-      - Juniper/contrail-vrouter
-      - Juniper/contrail-vrouter-java-api
-      - Juniper/contrail-vro-plugin
-      - Juniper/contrail-web-controller
-      - Juniper/contrail-web-core
-      - Juniper/contrail-web-server-manager
-      - Juniper/contrail-web-storage
-      - Juniper/contrail-webui-third-party
-      - Juniper/vijava
+      - tungsten/contrail-generateDS
+      - tungsten/contrail-heat
+      - tungsten/contrail-java-api
+      - tungsten/contrail-neutron-plugin
+      - tungsten/contrail-nova-vif-driver
+      - tungsten/contrail-packages
+      - tungsten/contrail-provisioning
+      - tungsten/contrail-sandesh
+      - tungsten/contrail-specs
+      - tungsten/contrail-test
+      - tungsten/contrail-third-party
+      - tungsten/contrail-tripleo-puppet
+      - tungsten/contrail-vcenter-plugin
+      - tungsten/contrail-vcenter-manager
+      - tungsten/contrail-vcenter-fabric-manager
+      - tungsten/contrail-vnc
+      - tungsten/contrail-vrouter
+      - tungsten/contrail-vrouter-java-api
+      - tungsten/contrail-vro-plugin
+      - tungsten/contrail-web-controller
+      - tungsten/contrail-web-core
+      - tungsten/contrail-web-server-manager
+      - tungsten/contrail-web-storage
+      - tungsten/contrail-webui-third-party
+      - tungsten/vijava
     pre-run: playbooks/contrail/vnc-pre.yaml
 
 - job:
@@ -176,7 +176,7 @@
 
       This is a base job for testing packaging of Contrail VNC for Enterprise
       Linux based distributions (CentOS, RHEL). Release-based variants of this
-      job are then added to the Juniper/contrail-packages project.
+      job are then added to the tungsten/contrail-packages project.
     run: playbooks/packaging/contrail-vnc-el.yaml
     post-run: playbooks/packaging/post-vnc-el.yaml
     secrets:
@@ -199,20 +199,20 @@
       - ^R5\.0$
       - ^contrail_dpdk_17_11_3$
     required-projects:
-      - Juniper/contrail-api-client
-      - Juniper/contrail-build
-      - Juniper/contrail-controller
-      - name: Juniper/contrail-dpdk
+      - tungsten/contrail-api-client
+      - tungsten/contrail-build
+      - tungsten/contrail-controller
+      - name: tungsten/contrail-dpdk
         override-checkout: contrail_dpdk_17_11
-      - Juniper/contrail-generateDS
-      - Juniper/contrail-third-party
-      - Juniper/contrail-packages
-      - Juniper/contrail-provisioning
-      - Juniper/contrail-sandesh
-      - Juniper/contrail-vrouter
-      - Juniper/contrail-nova-vif-driver
-      - Juniper/contrail-common
-      - Juniper/contrail-analytics
+      - tungsten/contrail-generateDS
+      - tungsten/contrail-third-party
+      - tungsten/contrail-packages
+      - tungsten/contrail-provisioning
+      - tungsten/contrail-sandesh
+      - tungsten/contrail-vrouter
+      - tungsten/contrail-nova-vif-driver
+      - tungsten/contrail-common
+      - tungsten/contrail-analytics
     irrelevant-files:
       - specs/.*
     run: playbooks/unittest/contrail.yaml
@@ -227,20 +227,20 @@
     name: contrail-vnc-build-unittest-ubuntu-trusty
     branches: ^(?!(R5\.0|contrail_dpdk_17_11_3)).*$
     required-projects:
-      - Juniper/contrail-api-client
-      - Juniper/contrail-build
-      - Juniper/contrail-controller
-      - name: Juniper/contrail-dpdk
+      - tungsten/contrail-api-client
+      - tungsten/contrail-build
+      - tungsten/contrail-controller
+      - name: tungsten/contrail-dpdk
         override-checkout: contrail_dpdk_18_05_1
-      - Juniper/contrail-generateDS
-      - Juniper/contrail-third-party
-      - Juniper/contrail-packages
-      - Juniper/contrail-provisioning
-      - Juniper/contrail-sandesh
-      - Juniper/contrail-vrouter
-      - Juniper/contrail-nova-vif-driver
-      - Juniper/contrail-common
-      - Juniper/contrail-analytics
+      - tungsten/contrail-generateDS
+      - tungsten/contrail-third-party
+      - tungsten/contrail-packages
+      - tungsten/contrail-provisioning
+      - tungsten/contrail-sandesh
+      - tungsten/contrail-vrouter
+      - tungsten/contrail-nova-vif-driver
+      - tungsten/contrail-common
+      - tungsten/contrail-analytics
     irrelevant-files:
       - specs/.*
     run: playbooks/unittest/contrail.yaml
@@ -276,7 +276,7 @@
     description: |
       A job for publishing Docker containers to DockerHub.
     required-projects:
-      - Juniper/contrail-publisher
+      - tungsten/contrail-publisher
       - tungsten-infra/containerregistry
     run: playbooks/docker/publish-nightly.yaml
     nodeset:
@@ -299,8 +299,8 @@
     pre-run: playbooks/contrail-base2/pre.yaml
     post-run: playbooks/contrail-base2/post.yaml
     roles:
-      - zuul: Juniper/zuul-jobs
-      - zuul: Juniper/contrail-zuul-jobs
+      - zuul: mrasskazov/zuul-jobs
+      - zuul: tungsten-ci/contrail-zuul-jobs
     vars:
       setup_docker_registry: false
     timeout: 28800
@@ -318,7 +318,7 @@
     pre-run: playbooks/contrail-docker-push-base/pre.yaml
     post-run: playbooks/contrail-docker-push-base/post.yaml
     roles:
-      - zuul: Juniper/contrail-zuul-jobs
+      - zuul: tungsten-ci/contrail-zuul-jobs
     vars:
       setup_docker_registry: true
     secrets:
@@ -343,8 +343,8 @@
       This job is posting infra-doc html.
     parent: build-infra-doc
     required-projects:
-      - Juniper/contrail-zuul-jobs
-      - Juniper/contrail-infra-doc
+      - tungsten-ci/contrail-zuul-jobs
+      - tungsten/contrail-infra-doc
     post-run: playbooks/publish-infra-doc/post.yaml
     nodeset: builder-centos-7
     secrets:
@@ -356,7 +356,7 @@
     description: |
       Publish build rpms to Nexus repository.
     required-projects:
-      - Juniper/contrail-zuul-jobs
+      - tungsten-ci/contrail-zuul-jobs
     post-run: playbooks/publish-third-party-packages/post.yaml
     nodeset: builder-centos-7
     secrets:
@@ -371,9 +371,9 @@
       Requires jenkins_job.
     run: playbooks/trigger-win-base/run.yaml
     required-projects:
-      - Juniper/contrail-windows
-      - Juniper/contrail-windows-docker-driver
-      - Juniper/contrail-windows-test
+      - tungsten/contrail-windows
+      - tungsten/contrail-windows-docker-driver
+      - tungsten/contrail-windows-test
     nodeset: ubuntu-xenial
     timeout: 18000
     vars:
@@ -403,7 +403,7 @@
       build.
     run: playbooks/generate-build-change-info/run.yaml
     required-projects:
-      - Juniper/contrail-zuul-jobs
+      - tungsten-ci/contrail-zuul-jobs
       - tungsten-infra/ci-utils
     nodeset: builder-centos-7
     secrets:
