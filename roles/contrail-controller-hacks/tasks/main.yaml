@@ -1,6 +1,6 @@
 ---
 
-- name: Add review.opencontrail.org remote
+- name: Add gerrit.mcp.mirantis.net remote
   command: git remote add gerrit "https://{{ item }}"
   args:
     chdir: "{{ ansible_env.HOME }}/src/{{ item }}"

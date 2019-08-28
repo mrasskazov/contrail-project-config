@@ -1,8 +1,8 @@
 ---
 
-- name: Verify connectivity to review.opencontrail.org
+- name: Verify connectivity to gerrit.mcp.mirantis.net
   wait_for:
-    host: review.opencontrail.org
+    host: gerrit.mcp.mirantis.net
     port: 29418
     timeout: 10
 
