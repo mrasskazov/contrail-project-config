@@ -8,11 +8,13 @@
         untrusted-projects:
           - mrasskazov/zuul-jobs:
               shadow: mrasskazov/contrail-project-config
-          #- Juniper/contrail-publisher
+          - Juniper/contrail-publisher
           #- Juniper/zuul:
           #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
-          #- tungsten-infra/ci-utils
-          #- tungsten-infra/containerregistry
+          - tungsten-infra/ci-utils
+          - tungsten-infra/containerregistry
+          - tungstenfabric/tungsten-test-runner
+          - tungstenfabric-infra/periodic-nightly
       gerrit:
         #config-projects:
         #  - tungsten-ci/contrail-project-config
@@ -88,5 +90,3 @@
           #- tungsten/puppet-contrail
           - tungsten/vijava
           #- tungstenfabric/docs
-          #- tungstenfabric/tungsten-test-runner
-          #- tungstenfabric-infra/periodic-nightly
