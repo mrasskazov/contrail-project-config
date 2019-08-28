@@ -22,17 +22,17 @@
         #  - tungsten-ci/contrail-project-config
         untrusted-projects:
           #- Juniper/contrail
-          - tungsten-ci/contrail-zuul-jobs:
-              shadow: mrasskazov/contrail-project-config
+          #- tungsten-ci/contrail-zuul-jobs:
+          #    shadow: mrasskazov/contrail-project-config
           - tungsten/contrail-analytics
-          #- tungsten/contrail-ansible
-          #- tungsten/contrail-ansible-deployer
+          - tungsten/contrail-ansible
+          - tungsten/contrail-ansible-deployer
           #- tungsten/contrail-ansible-internal
           - tungsten/contrail-api-client
           - tungsten/contrail-build
           - tungsten/contrail-common
           #- tungsten/contrail-community-docs
-          #- tungsten/contrail-container-builder
+          - tungsten/contrail-container-builder
           - tungsten/contrail-controller
           #- tungsten/contrail-deployers-containers
           #- tungsten/contrail-dev-env
@@ -40,7 +40,7 @@
           #- tungsten/contrail-docs
           - tungsten/contrail-dpdk
           - tungsten/contrail-fabric-utils
-          #- tungsten/contrail-generateDS
+          - tungsten/contrail-generateDS
           #- tungsten/contrail-go-api
           - tungsten/contrail-heat
           #- tungsten/contrail-helm-deployer
@@ -48,8 +48,8 @@
           #- tungsten/contrail-infra
           #- tungsten/contrail-infra-doc
           - tungsten/contrail-java-api
-          #- tungsten/contrail-kolla-ansible:
-          #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - tungsten/contrail-kolla-ansible:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           - tungsten/contrail-neutron-plugin
           - tungsten/contrail-nova-vif-driver
           - tungsten/contrail-packages
