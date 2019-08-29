@@ -38,7 +38,7 @@
       - playbooks/base/post-logs.yaml
     roles:
       - zuul: mrasskazov/zuul-jobs
-      - zuul: tungsten-ci/contrail-zuul-jobs
+      - zuul: mrasskazov/contrail-zuul-jobs
     timeout: 28800
     nodeset:
       nodes:
@@ -59,7 +59,7 @@
       - playbooks/base/post-logs.yaml
     roles:
       - zuul: mrasskazov/zuul-jobs
-      - zuul: tungsten-ci/contrail-zuul-jobs
+      - zuul: mrasskazov/contrail-zuul-jobs
     timeout: 28800
     secrets:
       - site_logs
@@ -74,7 +74,7 @@
     pre-run: playbooks/contrail/src-pre.yaml
     roles:
       - zuul: mrasskazov/zuul-jobs
-      - zuul: tungsten-ci/contrail-zuul-jobs
+      - zuul: mrasskazov/contrail-zuul-jobs
 
 - job:
     name: contrail-vnc-base
@@ -300,7 +300,7 @@
     post-run: playbooks/contrail-base2/post.yaml
     roles:
       - zuul: mrasskazov/zuul-jobs
-      - zuul: tungsten-ci/contrail-zuul-jobs
+      - zuul: mrasskazov/contrail-zuul-jobs
     vars:
       setup_docker_registry: false
     timeout: 28800
@@ -318,7 +318,7 @@
     pre-run: playbooks/contrail-docker-push-base/pre.yaml
     post-run: playbooks/contrail-docker-push-base/post.yaml
     roles:
-      - zuul: tungsten-ci/contrail-zuul-jobs
+      - zuul: mrasskazov/contrail-zuul-jobs
     vars:
       setup_docker_registry: true
     secrets:
@@ -343,7 +343,7 @@
       This job is posting infra-doc html.
     parent: build-infra-doc
     required-projects:
-      - tungsten-ci/contrail-zuul-jobs
+      - mrasskazov/contrail-zuul-jobs
       - tungsten/contrail-infra-doc
     post-run: playbooks/publish-infra-doc/post.yaml
     nodeset: builder-centos-7
@@ -356,7 +356,7 @@
     description: |
       Publish build rpms to Nexus repository.
     required-projects:
-      - tungsten-ci/contrail-zuul-jobs
+      - mrasskazov/contrail-zuul-jobs
     post-run: playbooks/publish-third-party-packages/post.yaml
     nodeset: builder-centos-7
     secrets:
@@ -403,7 +403,7 @@
       build.
     run: playbooks/generate-build-change-info/run.yaml
     required-projects:
-      - tungsten-ci/contrail-zuul-jobs
+      - mrasskazov/contrail-zuul-jobs
       - tungsten-infra/ci-utils
     nodeset: builder-centos-7
     secrets:
