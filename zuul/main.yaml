@@ -34,8 +34,8 @@
           #- tungsten/contrail-community-docs
           - tungsten/contrail-container-builder
           - tungsten/contrail-controller
-          #- tungsten/contrail-deployers-containers
-          #- tungsten/contrail-dev-env
+          - tungsten/contrail-deployers-containers
+          - tungsten/contrail-dev-env
           #- tungsten/contrail-docker
           #- tungsten/contrail-docs
           - tungsten/contrail-dpdk
@@ -45,8 +45,8 @@
           - tungsten/contrail-heat
           #- tungsten/contrail-helm-deployer
           #- tungsten/contrail-horizon
-          #- tungsten/contrail-infra
-          #- tungsten/contrail-infra-doc
+          - tungsten/contrail-infra
+          - tungsten/contrail-infra-doc
           - tungsten/contrail-java-api
           - tungsten/contrail-kolla-ansible:
               exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
@@ -63,7 +63,7 @@
           #- tungsten/contrail-test-ci
           - tungsten/contrail-third-party
           #- tungsten/contrail-third-party-cache
-          #- tungsten/contrail-third-party-packages
+          - tungsten/contrail-third-party-packages
           #- tungsten/contrail-tripleo-heat-templates
           - tungsten/contrail-tripleo-puppet
           - tungsten/contrail-vro-plugin
@@ -74,19 +74,19 @@
           - tungsten/contrail-web-core
           - tungsten/contrail-web-server-manager
           - tungsten/contrail-web-storage
-          #- tungsten/contrail-windows
+          - tungsten/contrail-windows
           #- tungsten/contrail-windows-docker-driver
           #- tungsten/contrail-windows-test
           #- tungsten/contrail-windows-ci-infra
-          #- tungsten/contrail-vcenter-fabric-manager
+          - tungsten/contrail-vcenter-fabric-manager
           - tungsten/contrail-vcenter-manager
           - tungsten/contrail-vcenter-plugin
           - tungsten/contrail-vnc
           #- tungsten/horizon
           #- tungsten/nova
-          #- tungsten/openshift-ansible
-          #- tungsten/openstack-helm:
-          #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - tungsten/openshift-ansible
+          - tungsten/openstack-helm:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           #- tungsten/openstack-helm-infra:
           #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           #- tungsten/puppet-contrail
