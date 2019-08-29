@@ -276,7 +276,7 @@
     description: |
       A job for publishing Docker containers to DockerHub.
     required-projects:
-      - tungsten/contrail-publisher
+      - tungsten-ci/contrail-publisher
       - tungsten-infra/containerregistry
     run: playbooks/docker/publish-nightly.yaml
     nodeset:

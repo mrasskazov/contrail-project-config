@@ -10,7 +10,7 @@
               shadow: mrasskazov/contrail-project-config
           - mrasskazov/contrail-zuul-jobs:
               shadow: mrasskazov/contrail-project-config
-          - Juniper/contrail-publisher
+          - tungsten-ci/contrail-publisher
           #- Juniper/zuul:
           #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           - tungsten-infra/ci-utils
