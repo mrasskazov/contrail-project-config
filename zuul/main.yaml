@@ -15,7 +15,9 @@
           - tungsten-infra/ci-utils
           - tungsten-infra/containerregistry
           - tungstenfabric/tungsten-test-runner
-          - tungstenfabric-infra/periodic-nightly
+          - tungstenfabric-infra-preview/periodic-nightly
+          - Juniper/horizon
+          - Juniper/nova
       gerrit:
         #config-projects:
         #  - tungsten-ci/contrail-project-config
