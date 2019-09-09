@@ -42,7 +42,7 @@
           - tungsten/contrail-generateDS
           #- tungsten/contrail-go-api
           - tungsten/contrail-heat
-          #- tungsten/contrail-helm-deployer
+          - tungsten/contrail-helm-deployer
           #- tungsten/contrail-horizon
           - tungsten/contrail-infra
           - tungsten/contrail-infra-doc
