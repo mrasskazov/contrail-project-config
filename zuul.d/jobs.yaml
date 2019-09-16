@@ -79,11 +79,12 @@
 - job:
     name: contrail-vnc-base
     branches:
-      - ^R5\.0$
-      - ^contrail_dpdk_17_11_3$
-      - ^release-3.9-contrail$
+      - ^mcp\/.*$
+      #- ^R5\.0$
+      #- ^contrail_dpdk_17_11_3$
+      #- ^release-3.9-contrail$
     parent: contrail-base-untrusted
-    override-checkout: R5.0
+    override-checkout: mcp/R5.1
     description: |
       A base job that prepares Contrail VNC sandbox using Android repo,
       as opposed to the contrail-src-base job that copies the sources directly.
@@ -123,11 +124,13 @@
       - tungsten/vijava
     pre-run: playbooks/contrail/vnc-pre.yaml
     vars:
-      tpc_branch: 'R5.0'
+      tpc_branch: 'mcp/R5.1'
 
 - job:
     name: contrail-vnc-base
-    branches: ^(?!(R5\.0|contrail_dpdk_17_11_3|release-3\.9-contrail)).*$
+    branches:
+      #- ^(?!(R5\.0|contrail_dpdk_17_11_3|release-3\.9-contrail)).*$
+      - ^mcp\/.*$
     parent: contrail-base-untrusted
     description: |
       A base job that prepares Contrail VNC sandbox using Android repo,
@@ -196,8 +199,9 @@
 - job:
     name: contrail-vnc-build-unittest-ubuntu-trusty
     branches:
-      - ^R5\.0$
-      - ^contrail_dpdk_17_11_3$
+      - ^mcp\/.*$
+      #- ^R5\.0$
+      #- ^contrail_dpdk_17_11_3$
     required-projects:
       - tungsten/contrail-api-client
       - tungsten/contrail-build
@@ -225,7 +229,9 @@
 
 - job:
     name: contrail-vnc-build-unittest-ubuntu-trusty
-    branches: ^(?!(R5\.0|contrail_dpdk_17_11_3)).*$
+    branches:
+      #- ^(?!(R5\.0|contrail_dpdk_17_11_3)).*$
+      - ^mcp\/.*$
     required-projects:
       - tungsten/contrail-api-client
       - tungsten/contrail-build
@@ -385,7 +391,9 @@
 - job:
     name: create-windows-containers
     parent: trigger-win-base
-    branches: ^(master|R1907)$
+    branches:
+      #- ^(master|R1907)$
+      - ^mcp\/.*$
     post-run: playbooks/publish-windows-containers/post.yaml
     required-projects:
       - tungsten-infra/containerregistry
