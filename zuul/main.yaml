@@ -19,6 +19,7 @@
           - Juniper/horizon
           - Juniper/nova
           - Juniper/contrail
+          - Juniper/zuul
       gerrit:
         #config-projects:
         #  - tungsten-ci/contrail-project-config
