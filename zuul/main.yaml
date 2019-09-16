@@ -18,6 +18,7 @@
           - tungstenfabric-infra-preview/periodic-nightly
           - Juniper/horizon
           - Juniper/nova
+          - Juniper/contrail
       gerrit:
         #config-projects:
         #  - tungsten-ci/contrail-project-config
@@ -76,7 +77,7 @@
           - tungsten/contrail-web-server-manager
           - tungsten/contrail-web-storage
           - tungsten/contrail-windows
-          #- tungsten/contrail-windows-docker-driver
+          - tungsten/contrail-windows-docker-driver
           #- tungsten/contrail-windows-test
           #- tungsten/contrail-windows-ci-infra
           - tungsten/contrail-vcenter-fabric-manager
@@ -88,8 +89,8 @@
           - tungsten/openshift-ansible
           - tungsten/openstack-helm:
               exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
-          #- tungsten/openstack-helm-infra:
-          #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - tungsten/openstack-helm-infra:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
           #- tungsten/puppet-contrail
           - tungsten/vijava
           #- tungstenfabric/docs
