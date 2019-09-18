@@ -197,7 +197,7 @@
           label: ubuntu-trusty-builder
 
 - job:
-    name: contrail-vnc-build-unittest-ubuntu-trusty
+    name: contrail-vnc-build-unittest-ubuntu-bionic
     branches:
       - ^mcp\/.*$
       #- ^R5\.0$
@@ -207,7 +207,7 @@
       - tungsten/contrail-build
       - tungsten/contrail-controller
       - name: tungsten/contrail-dpdk
-        override-checkout: contrail_dpdk_17_11
+        override-checkout: contrail_dpdk_18_05_1
       - tungsten/contrail-generateDS
       - tungsten/contrail-third-party
       - tungsten/contrail-packages
