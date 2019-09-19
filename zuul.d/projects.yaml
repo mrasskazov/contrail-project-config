@@ -1,8 +1,8 @@
 - project-template:
-    name: unittests
+    name: huunittests
     check:
       jobs:
-      - contrail-vnc-build-unittest-ubuntu-bionic
+      - noop
     gate:
       queue: contrail-vnc
       jobs:
@@ -213,8 +213,9 @@
 - project:
     name: tungsten/contrail-analytics
     templates:
-    - unittests
-    - systests
+    - huunittests
+    #- unittests
+    #- systests
     check:
       jobs:
       - contrail-vnc-specs-linter:
