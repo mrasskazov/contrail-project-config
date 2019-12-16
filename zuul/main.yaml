@@ -2,97 +2,89 @@
     name: tungsten
     max-job-timeout: -1
     source:
-      github:
-        config-projects:
-          - mrasskazov/contrail-project-config
-        untrusted-projects:
-          - mrasskazov/zuul-jobs:
-              shadow: mrasskazov/contrail-project-config
-          - mrasskazov/contrail-zuul-jobs:
-              shadow: mrasskazov/contrail-project-config
-          #- Juniper/zuul:
-          #    exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
-          - tungsten-infra/ci-utils
-          - tungsten-infra/containerregistry
-          - tungstenfabric/tungsten-test-runner
-          - tungstenfabric-infra-preview/periodic-nightly
+          github:
+                config-projects:
+                      - casek14/contrail-project-config
+            untrusted-projects:
+              - Juniper/zuul-jobs:
+                      shadow: casek14/contrail-project-config
+              - Juniper/contrail-publisher
+              - Juniper/zuul:
+                      exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/contrail-ansible-deployer
+          - Juniper/contrail-fabric-utils
+          - Juniper/contrail-java-api
+          - Juniper/contrail-provisioning
+          - Juniper/contrail-specs
+          - Juniper/contrail-test
+          - Juniper/contrail-tripleo-puppet
+          - Juniper/contrail-vcenter-fabric-manager
+          - Juniper/contrail-vcenter-manager
+          - Juniper/contrail-vcenter-plugin
+          - Juniper/contrail-vnc
+          - Juniper/contrail-vrouter-java-api
+          - Juniper/contrail-vro-plugin
+          - Juniper/vijava
+          - Juniper/contrail
+          - Juniper/contrail-ansible
+          - Juniper/contrail-ansible-internal
+          - Juniper/contrail-community-docs
+          - Juniper/contrail-container-builder
+          - Juniper/contrail-deployers-containers
+          - Juniper/contrail-dev-env
+          - Juniper/contrail-docker
+          - Juniper/contrail-go-api
+          - Juniper/contrail-helm-deployer
+          - Juniper/contrail-horizon
+          - Juniper/contrail-infra
+          - Juniper/contrail-infra-doc
+          - Juniper/contrail-kolla-ansible:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/contrail-packaging
+          - Juniper/contrail-puppet
+          - Juniper/contrail-server-manager
+          - Juniper/contrail-test-ci
+          - Juniper/contrail-third-party-cache
+          - Juniper/contrail-third-party-packages
+          - Juniper/contrail-tripleo-heat-templates
+          - Juniper/contrail-windows
+          - Juniper/contrail-windows-docker-driver
+          - Juniper/contrail-windows-test
+          - Juniper/contrail-windows-ci-infra
           - Juniper/horizon
           - Juniper/nova
-          - Juniper/contrail
-          - Juniper/zuul
+          - Juniper/contrail-docs
+          - Juniper/openshift-ansible
+          - Juniper/openstack-helm:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/openstack-helm-infra:
+              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
+          - Juniper/puppet-contrail
+          - tungsten-infra/ci-utils
+          - tungsten-infra/containerregistry
+          - tungstenfabric/docs
+          - tungstenfabric/tungsten-test-runner
+            #- tungstenfabric-infra/periodic-nightly
       gerrit:
-        #config-projects:
-        #  - tungsten-ci/contrail-project-config
-        untrusted-projects:
-          #- Juniper/contrail
-          #- tungsten-ci/contrail-zuul-jobs:
-          #    shadow: mrasskazov/contrail-project-config
-          - tungsten/contrail-analytics
-          - tungsten/contrail-ansible
-          - tungsten/contrail-ansible-deployer
-          #- tungsten/contrail-ansible-internal
-          - tungsten/contrail-api-client
-          - tungsten/contrail-build
-          - tungsten/contrail-common
-          #- tungsten/contrail-community-docs
-          - tungsten/contrail-container-builder
-          - tungsten/contrail-controller
-          - tungsten/contrail-deployers-containers
-          - tungsten/contrail-dev-env
-          #- tungsten/contrail-docker
-          #- tungsten/contrail-docs
-          - tungsten/contrail-dpdk
-          - tungsten/contrail-fabric-utils
-          - tungsten/contrail-generateDS
-          #- tungsten/contrail-go-api
-          - tungsten/contrail-heat
-          - tungsten/contrail-helm-deployer
-          #- tungsten/contrail-horizon
-          - tungsten/contrail-infra
-          - tungsten/contrail-infra-doc
-          - tungsten/contrail-java-api
-          - tungsten/contrail-kolla-ansible:
-              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
-          - tungsten/contrail-neutron-plugin
-          - tungsten/contrail-nova-vif-driver
-          - tungsten/contrail-packages
-          #- tungsten/contrail-packaging
-          - tungsten/contrail-provisioning
-          #- tungsten/contrail-puppet
-          - tungsten/contrail-sandesh
-          #- tungsten/contrail-server-manager
-          - tungsten/contrail-specs
-          - tungsten/contrail-test
-          #- tungsten/contrail-test-ci
-          - tungsten/contrail-third-party
-          #- tungsten/contrail-third-party-cache
-          - tungsten/contrail-third-party-packages
-          #- tungsten/contrail-tripleo-heat-templates
-          - tungsten/contrail-tripleo-puppet
-          - tungsten/contrail-vro-plugin
-          - tungsten/contrail-vrouter
-          - tungsten/contrail-vrouter-java-api
-          - tungsten/contrail-webui-third-party
-          - tungsten/contrail-web-controller
-          - tungsten/contrail-web-core
-          - tungsten/contrail-web-server-manager
-          - tungsten/contrail-web-storage
-          - tungsten/contrail-windows
-          - tungsten/contrail-windows-docker-driver
-          #- tungsten/contrail-windows-test
-          #- tungsten/contrail-windows-ci-infra
-          - tungsten/contrail-vcenter-fabric-manager
-          - tungsten/contrail-vcenter-manager
-          - tungsten/contrail-vcenter-plugin
-          - tungsten/contrail-vnc
-          #- tungsten/horizon
-          #- tungsten/nova
-          - tungsten/openshift-ansible
-          - tungsten/openstack-helm:
-              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
-          - tungsten/openstack-helm-infra:
-              exclude:  ['pipeline', 'job', 'semaphore', 'project', 'secret', 'project-template', 'nodeset']
-          #- tungsten/puppet-contrail
-          - tungsten/vijava
-          #- tungstenfabric/docs
-          - tungsten-ci/contrail-publisher
+            untrusted-projects:
+          - tungsten-ci/contrail-zuul-jobs:
+              shadow: casek14/contrail-project-config
+          - contrail/contrail-analytics
+          - contrail/contrail-api-client
+          - contrail/contrail-build
+          - contrail/contrail-common
+          - contrail/contrail-controller
+          - contrail/contrail-dpdk
+          - contrail/contrail-generateDS
+          - contrail/contrail-heat
+          - contrail/contrail-neutron-plugin
+          - contrail/contrail-nova-vif-driver
+          - contrail/contrail-packages
+          - contrail/contrail-sandesh
+          - contrail/contrail-third-party
+          - contrail/contrail-vrouter
+          - contrail/contrail-webui-third-party
+          - contrail/contrail-web-controller
+          - contrail/contrail-web-core
+          - contrail/contrail-web-server-manager
+          - contrail/contrail-web-storage
